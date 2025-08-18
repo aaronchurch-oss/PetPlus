@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.language-selector {
+    background: #ecf0f1;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.pricing-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f1f8ff 0%, #e8f4fd 100%);
+}
+
+.pricing-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.pricing-section > .container > p {
+    text-align: center;
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 50px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.pricing-card.featured {
+    border: 3px solid #3498db;
+    transform: scale(1.05);
+}
+
+.pricing-card.premium {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.premium-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: #f39c12;
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.price-header h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.pricing-card.premium .price-header h3 {
+    color: white;
+}
+
+.price {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 25px;
+}
+
+.pricing-card.premium .price {
+    color: #f1c40f;
+}
+
+.price span {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.features li {
+    padding: 8px 0;
+    color: #2c3e50;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.pricing-card.premium .features li {
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.features li:before {
+    content: "✓";
+    color: #27ae60;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.pricing-card.premium .features li:before {
+    color: #f1c40f;
+}
+
+.price-btn {
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.price-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.pricing-card.premium .price-btn {
+    background: #f1c40f;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.pricing-card.premium .price-btn:hover {
+    background: #f39c12;
+    color: white;
+}
+
+.pricing-notes {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.pricing-notes h4 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.pricing-notes p {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.contact-section {
+    background: white;
+    padding: 80px 0;
+    margin-top: 40px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.contact-section > .container > p {
+    text-align: center;
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 50px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contact-info h3 {
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8f9ff;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.contact-form {
+    background: #f8f9ff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.submit-btn {
+    background: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
