@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -7,12 +7,12 @@
 }
 
 body {
-    font-family: 'Creepster', cursive;
-    background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+    font-family: 'Playfair Display', serif;
+    background: url('assets/background.jpg') center/cover fixed no-repeat;
     color: #2c3e50;
     line-height: 1.6;
+    min-height: 100vh;
 }
-
 .header {
     background: white;
     padding: 20px 0;
@@ -364,3 +364,289 @@ body {
         gap: 30px;
     }
 }
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+.modal h2 {
+    color: #3498db;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.booking-form input[readonly] {
+    background-color: #f8f9ff;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.booking-form .submit-btn {
+    background: #27ae60;
+    margin-top: 20px;
+}
+
+.booking-form .submit-btn:hover {
+    background: #229954;
+}
+        /* Quick Photo Upload Styles */
+        .add-photo-card {
+            border: 3px dashed #3498db !important;
+            background: rgba(52, 152, 219, 0.1) !important;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .add-photo-card:hover {
+            border-color: #2980b9 !important;
+            background: rgba(52, 152, 219, 0.2) !important;
+            transform: translateY(-5px);
+        }
+
+        .add-photo-placeholder {
+            background: transparent !important;
+            color: #3498db !important;
+        }
+
+        .add-photo-content {
+            text-align: center;
+        }
+
+        .add-photo-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .add-photo-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .add-photo-subtext {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .admin-mode .add-photo-card {
+            display: block !important;
+        }
+
+        /* Quick Photo Modal */
+        .quick-photo-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quick-photo-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .quick-photo-content h3 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-photo-preview {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-photo-preview img {
+            max-width: 100%;
+            max-height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .quick-photo-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .quick-photo-buttons button {
+            flex: 1;
+        }
+                /* Add Review Button */
+        .add-review-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .add-review-btn {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+        }
+
+        .add-review-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+        }
+
+        /* Review Modal */
+        .add-review-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add-review-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .add-review-content h3 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            margin: 10px 0;
+        }
+
+        .star-rating .star {
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .star-rating .star:hover,
+        .star-rating .star.active {
+            transform: scale(1.2);
+        }
+
+        .review-form-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .review-form-buttons button {
+            flex: 1;
+        }
+
+        /* Hide admin controls from regular users */
+        .admin-controls {
+            display: none;
+        }
+
+        .admin-mode .admin-controls {
+            display: block;
+        }
